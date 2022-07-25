@@ -232,6 +232,20 @@ end
 module CreusotContracts_Logic_Model_Impl1
   type t
 end
+module CreusotContracts_Logic_Resolve_Impl1_Resolve_Interface
+  type t
+  use prelude.Prelude
+  predicate resolve (self : borrowed t)
+end
+module CreusotContracts_Logic_Resolve_Impl1_Resolve
+  type t
+  use prelude.Prelude
+  predicate resolve (self : borrowed t) =
+     ^ self =  * self
+end
+module CreusotContracts_Logic_Resolve_Impl1
+  type t
+end
 module IterMut_Impl2_ModelTy
   type t
   use seq.Seq
@@ -248,20 +262,6 @@ module IterMut_Impl2
   function model = Model0.model, type ModelTy0.modelTy = ModelTy0.modelTy
   clone CreusotContracts_Logic_Model_Model_ModelTy as ModelTy1 with type self = Type.itermut_itermut t,
   type modelTy = ModelTy0.modelTy
-end
-module CreusotContracts_Logic_Resolve_Impl1_Resolve_Interface
-  type t
-  use prelude.Prelude
-  predicate resolve (self : borrowed t)
-end
-module CreusotContracts_Logic_Resolve_Impl1_Resolve
-  type t
-  use prelude.Prelude
-  predicate resolve (self : borrowed t) =
-     ^ self =  * self
-end
-module CreusotContracts_Logic_Resolve_Impl1
-  type t
 end
 module IterMut_IncVec_Interface
   use prelude.Prelude
@@ -283,13 +283,13 @@ module IterMut_IncVec
   use mach.int.Int
   use Type
   clone IterMut_Impl0_ModelTy as ModelTy0 with type t = int
-  clone IterMut_Impl2_Model as Model2 with type t = int
   clone IterMut_Impl0_Model as Model0 with type t = int
   clone CreusotContracts_Logic_Model_Impl1_Model as Model1 with type t = Type.itermut_vec int,
   type ModelTy0.modelTy = ModelTy0.modelTy, function Model0.model = Model0.model
   clone CreusotContracts_Logic_Seq_Impl2_Tail as Tail0 with type t = borrowed int
   clone CreusotContracts_Logic_Seq_Impl2_Get as Get0 with type t = borrowed int
   clone CreusotContracts_Logic_Resolve_Impl1_Resolve as Resolve1 with type t = int
+  clone IterMut_Impl2_Model as Model2 with type t = int
   clone IterMut_Impl3_Next_Interface as Next0 with type t = int, function Model0.model = Model2.model,
   function Get0.get = Get0.get, function Tail0.tail = Tail0.tail
   clone CreusotContracts_Logic_Resolve_Impl1_Resolve as Resolve0 with type t = Type.itermut_vec int

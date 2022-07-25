@@ -706,10 +706,10 @@ module Hashmap_Impl5_Get
   type a = Type.alloc_alloc_global, axiom .
   clone Hashmap_Impl4_BucketIx as BucketIx0 with type k = k, type v = v, function HashLog0.hash_log = HashLog0.hash_log,
   function Model0.model = Model2.model
-  clone Hashmap_Impl1_Get as Get0 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy1.modelTy,
-  function Model0.model = Model1.model
   clone Hashmap_Impl4_Bucket as Bucket0 with type k = k, type v = v, function Model0.model = Model2.model,
   function BucketIx0.bucket_ix = BucketIx0.bucket_ix
+  clone Hashmap_Impl1_Get as Get0 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy1.modelTy,
+  function Model0.model = Model1.model
   clone Hashmap_Impl3_Model as Model3 with type k = k, type v = v, function Model0.model = Model1.model,
   function Bucket0.bucket = Bucket0.bucket, function Get0.get = Get0.get, type ModelTy0.modelTy = ModelTy1.modelTy,
   axiom .
@@ -806,7 +806,7 @@ module Hashmap_Impl5_Get
   }
   BB2 {
     _12 <- ([#"../hashmap.rs" 151 27 151 67] _10 = (0 : usize));
-    assert { not _12 };
+    assert { [#"../hashmap.rs" 151 27 151 67] not _12 };
     goto BB3
   }
   BB3 {
@@ -843,7 +843,7 @@ module Hashmap_Impl5_Get
   BB7 {
     switch (_25)
       | False -> goto BB9
-      | _ -> goto BB8
+      | True -> goto BB8
       end
   }
   BB8 {
@@ -1007,7 +1007,6 @@ module Hashmap_Impl5_Add
   use prelude.Prelude
   use map.Map
   use Type
-  use mach.int.UInt64
   clone CreusotContracts_Logic_Model_Model_ModelTy as ModelTy0 with type self = k
   clone Hashmap_Hash_HashLog as HashLog0 with type self = k, axiom .
   clone CreusotContracts_Logic_Model_Model_Model as Model1 with type self = k, type ModelTy0.modelTy = ModelTy0.modelTy
@@ -1017,10 +1016,10 @@ module Hashmap_Impl5_Add
   type a = Type.alloc_alloc_global, axiom .
   clone Hashmap_Impl4_BucketIx as BucketIx0 with type k = k, type v = v, function HashLog0.hash_log = HashLog0.hash_log,
   function Model0.model = Model2.model
-  clone Hashmap_Impl4_Bucket as Bucket0 with type k = k, type v = v, function Model0.model = Model2.model,
-  function BucketIx0.bucket_ix = BucketIx0.bucket_ix
   clone Hashmap_Impl1_Get as Get0 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy0.modelTy,
   function Model0.model = Model1.model
+  clone Hashmap_Impl4_Bucket as Bucket0 with type k = k, type v = v, function Model0.model = Model2.model,
+  function BucketIx0.bucket_ix = BucketIx0.bucket_ix
   clone Hashmap_Impl1_NoDoubleBinding as NoDoubleBinding0 with type k = k, type v = v,
   function Model0.model = Model1.model, function Get0.get = Get0.get, type ModelTy0.modelTy = ModelTy0.modelTy
   clone Hashmap_Impl5_GoodBucket as GoodBucket0 with type k = k, type v = v, function Model0.model = Model1.model,
@@ -1033,6 +1032,7 @@ module Hashmap_Impl5_Add
   predicate GoodBucket0.good_bucket = GoodBucket0.good_bucket,
   predicate NoDoubleBinding0.no_double_binding = NoDoubleBinding0.no_double_binding
   use mach.int.Int
+  use mach.int.UInt64
   use mach.int.Int64
   clone CreusotContracts_Logic_Model_Impl0_Model as Model3 with type t = k, type ModelTy0.modelTy = ModelTy0.modelTy,
   function Model0.model = Model1.model
@@ -1143,7 +1143,7 @@ module Hashmap_Impl5_Add
     _14 <- UInt64.of_int (UInt64.to_int _15);
     _17 <- length_11;
     _18 <- ([#"../hashmap.rs" 118 27 118 55] _17 = (0 : usize));
-    assert { not _18 };
+    assert { [#"../hashmap.rs" 118 27 118 55] not _18 };
     goto BB4
   }
   BB4 {
@@ -1203,7 +1203,7 @@ module Hashmap_Impl5_Add
   BB9 {
     switch (_43)
       | False -> goto BB11
-      | _ -> goto BB10
+      | True -> goto BB10
       end
   }
   BB10 {
@@ -1621,9 +1621,6 @@ module CreusotContracts_Logic_Model_Impl1_Model
   function model (self : borrowed t) : ModelTy0.modelTy =
     Model0.model ( * self)
 end
-module CreusotContracts_Logic_Model_Impl1
-  type t
-end
 module Core_Mem_Replace_Interface
   type t
   use prelude.Prelude
@@ -1639,6 +1636,9 @@ module Core_Mem_Replace
     ensures {  ^ dest = src }
     ensures { result =  * dest }
     
+end
+module CreusotContracts_Logic_Model_Impl1
+  type t
 end
 module Hashmap_Impl5_Resize_Interface
   type k
@@ -1676,40 +1676,38 @@ module Hashmap_Impl5_Resize
   use mach.int.Int32
   use map.Map
   use Type
-  use mach.int.UInt64
   clone CreusotContracts_Logic_Model_Model_ModelTy as ModelTy0 with type self = k
   clone Hashmap_Hash_HashLog as HashLog0 with type self = k, axiom .
   clone CreusotContracts_Logic_Model_Model_Model as Model2 with type self = k, type ModelTy0.modelTy = ModelTy0.modelTy
   clone Hashmap_Hash_HashLogEqModel as HashLogEqModel0 with type self = k, function Model0.model = Model2.model,
   function HashLog0.hash_log = HashLog0.hash_log, type ModelTy0.modelTy = ModelTy0.modelTy, axiom .
-  clone Hashmap_Impl3_ModelTy as ModelTy1 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy0.modelTy
   clone CreusotContracts_Std1_Vec_Impl0_Model as Model0 with type t = Type.hashmap_list (k, v),
   type a = Type.alloc_alloc_global, axiom .
   clone Hashmap_Impl4_BucketIx as BucketIx0 with type k = k, type v = v, function HashLog0.hash_log = HashLog0.hash_log,
   function Model0.model = Model0.model
-  clone Hashmap_Impl4_Bucket as Bucket0 with type k = k, type v = v, function Model0.model = Model0.model,
-  function BucketIx0.bucket_ix = BucketIx0.bucket_ix
   clone Hashmap_Impl1_Get as Get0 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy0.modelTy,
   function Model0.model = Model2.model
+  clone Hashmap_Impl4_Bucket as Bucket0 with type k = k, type v = v, function Model0.model = Model0.model,
+  function BucketIx0.bucket_ix = BucketIx0.bucket_ix
+  clone Hashmap_Impl1_NoDoubleBinding as NoDoubleBinding0 with type k = k, type v = v,
+  function Model0.model = Model2.model, function Get0.get = Get0.get, type ModelTy0.modelTy = ModelTy0.modelTy
   clone Hashmap_Impl5_GoodBucket as GoodBucket0 with type k = k, type v = v, function Model0.model = Model2.model,
   function Get0.get = Get0.get, function BucketIx0.bucket_ix = BucketIx0.bucket_ix,
   type ModelTy0.modelTy = ModelTy0.modelTy
-  clone Hashmap_Impl1_NoDoubleBinding as NoDoubleBinding0 with type k = k, type v = v,
-  function Model0.model = Model2.model, function Get0.get = Get0.get, type ModelTy0.modelTy = ModelTy0.modelTy
   clone Hashmap_Impl3_Model as Model1 with type k = k, type v = v, function Model0.model = Model2.model,
   function Bucket0.bucket = Bucket0.bucket, function Get0.get = Get0.get, type ModelTy0.modelTy = ModelTy0.modelTy,
   axiom .
-  clone CreusotContracts_Logic_Model_Impl1_Model as Model3 with type t = Type.hashmap_myhashmap k v,
-  type ModelTy0.modelTy = ModelTy1.modelTy, function Model0.model = Model1.model
   clone Hashmap_Impl5_HashmapInv as HashmapInv0 with type k = k, type v = v, function Model0.model = Model0.model,
   predicate GoodBucket0.good_bucket = GoodBucket0.good_bucket,
   predicate NoDoubleBinding0.no_double_binding = NoDoubleBinding0.no_double_binding
+  use mach.int.UInt64
   use mach.int.Int64
   clone CreusotContracts_Std1_Slice_Impl0_ModelTy as ModelTy2 with type t = Type.hashmap_list (k, v)
   clone Core_Slice_Index_Impl2_Output as Output0 with type t = Type.hashmap_list (k, v)
   clone CreusotContracts_Std1_Slice_Impl3_ResolveElswhere as ResolveElswhere0 with type t = Type.hashmap_list (k, v)
   clone CreusotContracts_Std1_Slice_Impl3_HasValue as HasValue0 with type t = Type.hashmap_list (k, v)
   clone CreusotContracts_Std1_Slice_Impl3_InBounds as InBounds0 with type t = Type.hashmap_list (k, v)
+  clone Hashmap_Impl3_ModelTy as ModelTy1 with type k = k, type v = v, type ModelTy0.modelTy = ModelTy0.modelTy
   clone CreusotContracts_Logic_Resolve_Impl1_Resolve as Resolve7 with type t = Type.hashmap_myhashmap k v
   clone CreusotContracts_Logic_Resolve_Resolve_Resolve as Resolve6 with type self = Type.hashmap_myhashmap k v
   clone Hashmap_Impl5_Add_Interface as Add0 with type k = k, type v = v,
@@ -1726,6 +1724,8 @@ module Hashmap_Impl5_Resize
   type a = Type.alloc_alloc_global, function Model0.model = Model0.model,
   predicate InBounds0.in_bounds = InBounds0.in_bounds, predicate HasValue0.has_value = HasValue0.has_value,
   predicate ResolveElswhere0.resolve_elswhere = ResolveElswhere0.resolve_elswhere, type Output0.output = Output0.output
+  clone CreusotContracts_Logic_Model_Impl1_Model as Model3 with type t = Type.hashmap_myhashmap k v,
+  type ModelTy0.modelTy = ModelTy1.modelTy, function Model0.model = Model1.model
   clone Hashmap_Impl5_New_Interface as New0 with type k = k, type v = v,
   predicate HashmapInv0.hashmap_inv = HashmapInv0.hashmap_inv, function Model0.model = Model1.model,
   function Model1.model = Model2.model, function Bucket0.bucket = Bucket0.bucket, function Get0.get = Get0.get,
@@ -1827,7 +1827,7 @@ module Hashmap_Impl5_Resize
     _24 <- ([#"../hashmap.rs" 185 14 185 36] _25 < _26);
     switch (_24)
       | False -> goto BB25
-      | _ -> goto BB8
+      | True -> goto BB8
       end
   }
   BB8 {

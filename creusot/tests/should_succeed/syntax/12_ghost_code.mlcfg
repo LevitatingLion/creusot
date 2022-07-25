@@ -211,9 +211,9 @@ module C12GhostCode_GhostCopy_Interface
   val ghost_copy [@cfg:stackify] (_ : ()) : ()
 end
 module C12GhostCode_GhostCopy
-  use seq.Seq
   use mach.int.Int
   use mach.int.Int32
+  use seq.Seq
   let rec cfg ghost_copy [@cfg:stackify] [#"../12_ghost_code.rs" 16 0 16 19] (_ : ()) : ()
    = [@vc:do_not_keep_trace] [@vc:sp]
   var _0 : ();
@@ -305,12 +305,11 @@ module C12GhostCode_GhostCheck_Interface
   val ghost_check [@cfg:stackify] (_ : ()) : ()
 end
 module C12GhostCode_GhostCheck
-  use Type
   use mach.int.Int
   use mach.int.Int32
-  clone C12GhostCode_LogiDrop as LogiDrop0 with type t = Type.alloc_vec_vec int32 (Type.alloc_alloc_global)
   use prelude.Prelude
   use mach.int.UInt64
+  use Type
   clone CreusotContracts_Logic_Resolve_Impl2_Resolve as Resolve1 with type t = int32
   clone CreusotContracts_Std1_Vec_Impl0_Model as Model0 with type t = int32, type a = Type.alloc_alloc_global, axiom .
   clone CreusotContracts_Std1_Vec_Impl3_Resolve as Resolve0 with type t = int32, function Model0.model = Model0.model,
@@ -319,6 +318,7 @@ module C12GhostCode_GhostCheck
   function Model0.model = Model0.model
   clone Alloc_Vec_Impl1_Push_Interface as Push0 with type t = int32, type a = Type.alloc_alloc_global,
   function Model0.model = Model0.model
+  clone C12GhostCode_LogiDrop as LogiDrop0 with type t = Type.alloc_vec_vec int32 (Type.alloc_alloc_global)
   clone Alloc_Vec_Impl0_New_Interface as New0 with type t = int32, function Model0.model = Model0.model
   let rec cfg ghost_check [@cfg:stackify] [#"../12_ghost_code.rs" 25 0 25 20] (_ : ()) : ()
    = [@vc:do_not_keep_trace] [@vc:sp]
@@ -362,7 +362,7 @@ module C12GhostCode_GhostCheck
     _8 <- not _9;
     switch (_8)
       | False -> goto BB6
-      | _ -> goto BB5
+      | True -> goto BB5
       end
   }
   BB5 {

@@ -540,7 +540,6 @@ module C05BinarySearchGeneric_BinarySearch
   use prelude.Prelude
   use mach.int.UInt64
   use Type
-  use mach.int.Int32
   clone CreusotContracts_Logic_Ord_OrdLogic_CmpLog as CmpLog0 with type self = t
   clone CreusotContracts_Logic_Ord_OrdLogic_GtLog as GtLog0 with type self = t,
   function CmpLog0.cmp_log = CmpLog0.cmp_log
@@ -575,6 +574,7 @@ module C05BinarySearchGeneric_BinarySearch
   predicate SortedRange0.sorted_range = SortedRange0.sorted_range
   clone CreusotContracts_Logic_Model_Impl0_Model as Model0 with type t = Type.alloc_vec_vec t (Type.alloc_alloc_global),
   type ModelTy0.modelTy = ModelTy0.modelTy, function Model0.model = Model1.model
+  use mach.int.Int32
   use prelude.Int8
   clone CreusotContracts_Std1_Slice_Impl0_ModelTy as ModelTy1 with type t = t
   clone Core_Slice_Index_Impl2_Output as Output0 with type t = t
@@ -669,7 +669,7 @@ module C05BinarySearchGeneric_BinarySearch
     _9 <- ([#"../05_binary_search_generic.rs" 25 7 25 21] _10 = (0 : usize));
     switch (_9)
       | False -> goto BB6
-      | _ -> goto BB5
+      | True -> goto BB5
       end
   }
   BB5 {
@@ -701,13 +701,13 @@ module C05BinarySearchGeneric_BinarySearch
     _21 <- ([#"../05_binary_search_generic.rs" 34 10 34 18] _22 > (1 : usize));
     switch (_21)
       | False -> goto BB18
-      | _ -> goto BB11
+      | True -> goto BB11
       end
   }
   BB11 {
     _24 <- size_13;
     _25 <- ([#"../05_binary_search_generic.rs" 35 19 35 27] (2 : usize) = (0 : usize));
-    assert { not _25 };
+    assert { [#"../05_binary_search_generic.rs" 35 19 35 27] not _25 };
     goto BB12
   }
   BB12 {
@@ -734,7 +734,7 @@ module C05BinarySearchGeneric_BinarySearch
   BB14 {
     switch (_34)
       | False -> goto BB16
-      | _ -> goto BB15
+      | True -> goto BB15
       end
   }
   BB15 {

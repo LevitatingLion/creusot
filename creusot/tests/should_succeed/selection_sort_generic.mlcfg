@@ -634,10 +634,6 @@ module SelectionSortGeneric_SelectionSort
   type t
   use prelude.Prelude
   use Type
-  use mach.int.UInt64
-  use seq.Seq
-  use mach.int.Int
-  use mach.int.Int32
   clone CreusotContracts_Logic_Ord_OrdLogic_CmpLog as CmpLog0 with type self = t
   clone CreusotContracts_Logic_Ord_OrdLogic_GtLog as GtLog0 with type self = t,
   function CmpLog0.cmp_log = CmpLog0.cmp_log
@@ -666,7 +662,6 @@ module SelectionSortGeneric_SelectionSort
   clone CreusotContracts_Logic_Ord_OrdLogic_CmpLeLog as CmpLeLog0 with type self = t,
   predicate LeLog0.le_log = LeLog0.le_log, function CmpLog0.cmp_log = CmpLog0.cmp_log, axiom .
   clone CreusotContracts_Std1_Vec_Impl0_ModelTy as ModelTy0 with type t = t, type a = Type.alloc_alloc_global
-  clone SelectionSortGeneric_Partition as Partition0 with type t = t, predicate LeLog0.le_log = LeLog0.le_log
   clone SelectionSortGeneric_SortedRange as SortedRange0 with type t = t, predicate LeLog0.le_log = LeLog0.le_log
   clone CreusotContracts_Logic_Seq_Impl2_PermutationOf as PermutationOf0 with type t = t
   clone CreusotContracts_Std1_Vec_Impl0_Model as Model0 with type t = t, type a = Type.alloc_alloc_global, axiom .
@@ -674,6 +669,10 @@ module SelectionSortGeneric_SelectionSort
   type ModelTy0.modelTy = ModelTy0.modelTy, function Model0.model = Model0.model
   clone SelectionSortGeneric_Sorted as Sorted0 with type t = t,
   predicate SortedRange0.sorted_range = SortedRange0.sorted_range
+  use mach.int.Int
+  use mach.int.UInt64
+  use seq.Seq
+  use mach.int.Int32
   clone CreusotContracts_Std1_Slice_Impl0_Model as Model2 with type t = t, axiom .
   clone CreusotContracts_Std1_Slice_Impl0_ModelTy as ModelTy1 with type t = t
   clone CreusotContracts_Logic_Model_Impl1_Model as Model3 with type t = seq t,
@@ -694,6 +693,7 @@ module SelectionSortGeneric_SelectionSort
   predicate HasValue0.has_value = HasValue0.has_value, type Output0.output = Output0.output
   clone Alloc_Vec_Impl1_Len_Interface as Len0 with type t = t, type a = Type.alloc_alloc_global,
   function Model0.model = Model0.model
+  clone SelectionSortGeneric_Partition as Partition0 with type t = t, predicate LeLog0.le_log = LeLog0.le_log
   clone CreusotContracts_Logic_Resolve_Resolve_Resolve as Resolve0 with type self = borrowed (Type.alloc_vec_vec t (Type.alloc_alloc_global))
   let rec cfg selection_sort [@cfg:stackify] [#"../selection_sort_generic.rs" 27 0 27 45] (v : borrowed (Type.alloc_vec_vec t (Type.alloc_alloc_global))) : ()
     ensures { [#"../selection_sort_generic.rs" 25 10 25 21] Sorted0.sorted (Model0.model ( ^ v)) }
@@ -771,7 +771,7 @@ module SelectionSortGeneric_SelectionSort
     _15 <- ([#"../selection_sort_generic.rs" 35 10 35 21] _16 < _17);
     switch (_15)
       | False -> goto BB17
-      | _ -> goto BB4
+      | True -> goto BB4
       end
   }
   BB4 {
@@ -793,7 +793,7 @@ module SelectionSortGeneric_SelectionSort
     _26 <- ([#"../selection_sort_generic.rs" 41 14 41 25] _27 < _28);
     switch (_26)
       | False -> goto BB14
-      | _ -> goto BB7
+      | True -> goto BB7
       end
   }
   BB7 {
@@ -821,7 +821,7 @@ module SelectionSortGeneric_SelectionSort
   BB10 {
     switch (_31)
       | False -> goto BB12
-      | _ -> goto BB11
+      | True -> goto BB11
       end
   }
   BB11 {

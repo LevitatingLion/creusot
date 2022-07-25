@@ -48,7 +48,7 @@
   <proof prover="0"><result status="valid" time="0.01" steps="166"/></proof>
   </goal>
   <goal name="search&#39;vc.13" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" time="0.01" steps="390"/></proof>
+  <proof prover="0"><result status="valid" time="0.01" steps="389"/></proof>
   </goal>
   <goal name="search&#39;vc.14" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" time="0.01" steps="120"/></proof>

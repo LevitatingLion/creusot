@@ -33,7 +33,7 @@
   <proof prover="0"><result status="valid" time="0.02" steps="159"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.8" expl="loop invariant init" proved="true">
-  <proof prover="0"><result status="valid" time="0.03" steps="215"/></proof>
+  <proof prover="0"><result status="valid" time="0.03" steps="216"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.9" expl="loop invariant init" proved="true">
   <proof prover="0"><result status="valid" time="0.02" steps="98"/></proof>
@@ -60,10 +60,10 @@
   <proof prover="0"><result status="valid" time="0.03" steps="239"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.17" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.16" steps="2596"/></proof>
+  <proof prover="0"><result status="valid" time="0.16" steps="2573"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.18" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.19" steps="2659"/></proof>
+  <proof prover="0"><result status="valid" time="0.19" steps="2630"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.19" expl="precondition" proved="true">
   <proof prover="0"><result status="valid" time="0.02" steps="85"/></proof>
@@ -75,7 +75,7 @@
   <proof prover="0"><result status="valid" time="0.04" steps="399"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.22" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.21" steps="1819"/></proof>
+  <proof prover="0"><result status="valid" time="0.21" steps="1849"/></proof>
   </goal>
   <goal name="selection_sort&#39;vc.23" expl="loop invariant preservation" proved="true">
   <proof prover="0"><result status="valid" time="0.02" steps="220"/></proof>

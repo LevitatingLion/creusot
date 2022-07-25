@@ -12,7 +12,7 @@
 </theory>
 <theory name="BinarySearch_Impl0_Index" proved="true">
  <goal name="index&#39;vc" expl="VC for index" proved="true">
- <proof prover="0"><result status="valid" time="0.03" steps="490"/></proof>
+ <proof prover="0"><result status="valid" time="0.03" steps="483"/></proof>
  </goal>
 </theory>
 <theory name="BinarySearch_Impl0_Len" proved="true">
@@ -66,19 +66,19 @@
   <proof prover="0"><result status="valid" time="0.03" steps="537"/></proof>
   </goal>
   <goal name="binary_search&#39;vc.14" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.12" steps="2000"/></proof>
+  <proof prover="0"><result status="valid" time="0.12" steps="2004"/></proof>
   </goal>
   <goal name="binary_search&#39;vc.15" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.32" steps="5508"/></proof>
+  <proof prover="0"><result status="valid" time="0.32" steps="5573"/></proof>
   </goal>
   <goal name="binary_search&#39;vc.16" expl="postcondition" proved="true">
   <proof prover="0"><result status="valid" time="0.09" steps="1809"/></proof>
   </goal>
   <goal name="binary_search&#39;vc.17" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" time="0.52" steps="11398"/></proof>
+  <proof prover="0"><result status="valid" time="0.52" steps="11197"/></proof>
   </goal>
   <goal name="binary_search&#39;vc.18" expl="postcondition" proved="true">
-  <proof prover="0"><result status="valid" time="0.60" steps="13743"/></proof>
+  <proof prover="0"><result status="valid" time="0.60" steps="12585"/></proof>
   </goal>
  </transf>
  </goal>

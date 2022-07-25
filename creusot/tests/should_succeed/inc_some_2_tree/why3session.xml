@@ -17,12 +17,12 @@
 </theory>
 <theory name="IncSome2Tree_Impl1_TakeSomeRest" proved="true">
  <goal name="take_some_rest&#39;vc" expl="VC for take_some_rest" proved="true">
- <proof prover="0"><result status="valid" time="0.83" steps="14944"/></proof>
+ <proof prover="0"><result status="valid" time="0.83" steps="14825"/></proof>
  </goal>
 </theory>
 <theory name="IncSome2Tree_IncSome2Tree" proved="true">
  <goal name="inc_some_2_tree&#39;vc" expl="VC for inc_some_2_tree" proved="true">
- <proof prover="0"><result status="valid" time="0.18" steps="1908"/></proof>
+ <proof prover="0"><result status="valid" time="0.18" steps="1906"/></proof>
  </goal>
 </theory>
 </file>

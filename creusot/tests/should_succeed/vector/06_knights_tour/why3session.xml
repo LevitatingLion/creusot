@@ -2,7 +2,7 @@
 <!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
 "http://why3.lri.fr/why3session.dtd">
 <why3session shape_version="6">
-<prover id="1" name="CVC4" version="1.8" timelimit="1" steplimit="0" memlimit="1000"/>
+<prover id="0" name="Z3" version="4.8.14" timelimit="1" steplimit="0" memlimit="1000"/>
 <prover id="2" name="Alt-Ergo" version="2.4.1" timelimit="1" steplimit="0" memlimit="1000"/>
 <file format="mlcfg" proved="true">
 <path name=".."/><path name="06_knights_tour.mlcfg"/>
@@ -18,17 +18,17 @@
 </theory>
 <theory name="C06KnightsTour_Impl1_New" proved="true">
  <goal name="new&#39;vc" expl="VC for new" proved="true">
- <proof prover="2"><result status="valid" time="0.20" steps="1710"/></proof>
+ <proof prover="2"><result status="valid" time="0.20" steps="1712"/></proof>
  </goal>
 </theory>
 <theory name="C06KnightsTour_Impl1_Available" proved="true">
  <goal name="available&#39;vc" expl="VC for available" proved="true">
- <proof prover="2"><result status="valid" time="0.12" steps="876"/></proof>
+ <proof prover="2"><result status="valid" time="0.12" steps="869"/></proof>
  </goal>
 </theory>
 <theory name="C06KnightsTour_Impl1_CountDegree" proved="true">
  <goal name="count_degree&#39;vc" expl="VC for count_degree" proved="true">
- <proof prover="2"><result status="valid" time="0.46" steps="8640"/></proof>
+ <proof prover="2"><result status="valid" time="0.46" steps="8586"/></proof>
  </goal>
 </theory>
 <theory name="C06KnightsTour_Impl1_Set" proved="true">
@@ -62,7 +62,7 @@
   <proof prover="2"><result status="valid" time="0.01" steps="71"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.4" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.20" steps="1816"/></proof>
+  <proof prover="2"><result status="valid" time="0.20" steps="1818"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.5" expl="integer overflow" proved="true">
   <proof prover="2"><result status="valid" time="0.02" steps="137"/></proof>
@@ -74,7 +74,7 @@
   <proof prover="2"><result status="valid" time="0.01" steps="89"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.8" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.16" steps="3062"/></proof>
+  <proof prover="2"><result status="valid" time="0.14" steps="2917"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.9" expl="integer overflow" proved="true">
   <proof prover="2"><result status="valid" time="0.02" steps="208"/></proof>
@@ -88,7 +88,7 @@
   <goal name="knights_tour&#39;vc.12" expl="precondition" proved="true">
   <transf name="split_vc" proved="true" >
    <goal name="knights_tour&#39;vc.12.0" expl="precondition" proved="true">
-   <proof prover="2"><result status="valid" time="0.12" steps="2464"/></proof>
+   <proof prover="2"><result status="valid" time="0.12" steps="2476"/></proof>
    </goal>
   </transf>
   </goal>
@@ -102,11 +102,7 @@
   <proof prover="2"><result status="valid" time="0.02" steps="332"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.16" expl="loop invariant preservation" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="knights_tour&#39;vc.16.0" expl="loop invariant preservation" proved="true">
-   <proof prover="1"><result status="valid" time="0.32" steps="60021"/></proof>
-   </goal>
-  </transf>
+  <proof prover="0"><result status="valid" time="0.13" steps="745044"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.17" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" time="0.02" steps="257"/></proof>
@@ -118,10 +114,10 @@
   <proof prover="2"><result status="valid" time="0.05" steps="1309"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.20" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.08" steps="1377"/></proof>
+  <proof prover="2"><result status="valid" time="0.16" steps="1377"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.21" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.16" steps="1441"/></proof>
+  <proof prover="2"><result status="valid" time="0.08" steps="1441"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.22" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" time="0.02" steps="331"/></proof>
@@ -136,7 +132,7 @@
   <proof prover="2"><result status="valid" time="0.05" steps="1693"/></proof>
   </goal>
   <goal name="knights_tour&#39;vc.26" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.36" steps="7603"/></proof>
+  <proof prover="2"><result status="valid" time="0.36" steps="7616"/></proof>
   </goal>
  </transf>
  </goal>

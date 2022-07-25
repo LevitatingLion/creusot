@@ -2,13 +2,13 @@
 <!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
 "http://why3.lri.fr/why3session.dtd">
 <why3session shape_version="6">
-<prover id="0" name="Z3" version="4.8.14" timelimit="5" steplimit="0" memlimit="1000"/>
+<prover id="0" name="Z3" version="4.8.14" timelimit="1" steplimit="0" memlimit="1000"/>
 <prover id="1" name="Alt-Ergo" version="2.4.1" timelimit="1" steplimit="0" memlimit="1000"/>
 <file format="mlcfg" proved="true">
 <path name=".."/><path name="knapsack.mlcfg"/>
 <theory name="Knapsack_Max" proved="true">
  <goal name="max&#39;vc" expl="VC for max" proved="true">
- <proof prover="1"><result status="valid" time="0.01" steps="81"/></proof>
+ <proof prover="1"><result status="valid" time="0.01" steps="82"/></proof>
  </goal>
 </theory>
 <theory name="Knapsack_M_Impl" proved="true">
@@ -23,7 +23,7 @@
   <proof prover="1"><result status="valid" time="0.02" steps="50"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.1" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="86"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="86"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.2" expl="loop invariant init" proved="true">
   <proof prover="1"><result status="valid" time="0.02" steps="54"/></proof>
@@ -32,7 +32,7 @@
   <proof prover="1"><result status="valid" time="0.02" steps="107"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.4" expl="loop invariant init" proved="true">
-  <proof prover="1"><result status="valid" time="0.04" steps="484"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="483"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.5" expl="loop invariant init" proved="true">
   <proof prover="1"><result status="valid" time="0.03" steps="363"/></proof>
@@ -47,31 +47,31 @@
   <proof prover="1"><result status="valid" time="0.03" steps="230"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.9" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="145"/></proof>
+  <proof prover="1"><result status="valid" time="0.03" steps="145"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.10" expl="integer overflow" proved="true">
   <proof prover="1"><result status="valid" time="0.03" steps="295"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.11" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="172"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="172"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.12" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.04" steps="348"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="348"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.13" expl="precondition" proved="true">
   <proof prover="1"><result status="valid" time="0.03" steps="186"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.14" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.04" steps="414"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="414"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.15" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.34" steps="7812"/></proof>
+  <proof prover="1"><result status="valid" time="0.34" steps="7805"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.16" expl="loop invariant preservation" proved="true">
   <proof prover="1"><result status="valid" time="0.02" steps="195"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.17" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.06" steps="656"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="654"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.18" expl="precondition" proved="true">
   <proof prover="1"><result status="valid" time="0.02" steps="85"/></proof>
@@ -86,7 +86,7 @@
   <proof prover="1"><result status="valid" time="0.03" steps="192"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.22" expl="loop invariant init" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="101"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="101"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.23" expl="loop invariant init" proved="true">
   <proof prover="1"><result status="valid" time="0.03" steps="180"/></proof>
@@ -95,25 +95,25 @@
   <proof prover="1"><result status="valid" time="0.03" steps="211"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.25" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="121"/></proof>
+  <proof prover="1"><result status="valid" time="0.03" steps="121"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.26" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.03" steps="227"/></proof>
+  <proof prover="1"><result status="valid" time="0.10" steps="227"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.27" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.05" steps="415"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="415"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.28" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.03" steps="240"/></proof>
+  <proof prover="0" timelimit="5"><result status="valid" time="0.12" steps="294838"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.29" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="124"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="124"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.30" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.03" steps="266"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="266"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.31" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="145"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="145"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.32" expl="integer overflow" proved="true">
   <proof prover="1"><result status="valid" time="0.04" steps="389"/></proof>
@@ -122,54 +122,43 @@
   <proof prover="1"><result status="valid" time="0.04" steps="377"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.34" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.11" steps="1184"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="1183"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.35" expl="precondition" proved="true">
   <proof prover="1"><result status="valid" time="0.02" steps="179"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.36" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.02" steps="124"/></proof>
+  <proof prover="1"><result status="valid" time="0.03" steps="124"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.37" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.03" steps="266"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="266"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.38" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.04" steps="347"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="347"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.39" expl="precondition" proved="true">
   <proof prover="1"><result status="valid" time="0.02" steps="135"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.40" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.05" steps="420"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="420"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.41" expl="integer overflow" proved="true">
   <proof prover="1"><result status="valid" time="0.05" steps="500"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.42" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.03" steps="179"/></proof>
+  <proof prover="1"><result status="valid" time="0.02" steps="179"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.43" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.10" steps="906"/></proof>
+  <proof prover="1"><result status="valid" time="0.03" steps="904"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.44" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.11" steps="1003"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="1003"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.45" expl="loop invariant preservation" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="knapsack01_dyn&#39;vc.45.0" expl="loop invariant preservation" proved="true">
-   <transf name="split_vc" proved="true" >
-    <goal name="knapsack01_dyn&#39;vc.45.0.0" expl="loop invariant preservation" proved="true">
-    <proof prover="0" timelimit="1"><result status="valid" time="0.08" steps="423166"/></proof>
-    </goal>
-    <goal name="knapsack01_dyn&#39;vc.45.0.1" expl="loop invariant preservation" proved="true">
-    <proof prover="1"><result status="valid" time="0.91" steps="22355"/></proof>
-    </goal>
-   </transf>
-   </goal>
-  </transf>
+  <proof prover="0"><result status="valid" time="0.06" steps="407156"/></proof>
   </goal>
   <goal name="knapsack01_dyn&#39;vc.46" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.12" steps="380524"/></proof>
+  <proof prover="0"><result status="valid" time="0.06" steps="380524"/></proof>
   </goal>
  </transf>
  </goal>

@@ -69,7 +69,7 @@
   <proof prover="2"><result status="valid" time="0.24" steps="9573"/></proof>
   </goal>
   <goal name="add&#39;vc.16" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.49" steps="17824"/></proof>
+  <proof prover="2"><result status="valid" time="0.48" steps="17824"/></proof>
   </goal>
   <goal name="add&#39;vc.17" expl="loop invariant preservation" proved="true">
   <proof prover="2"><result status="valid" time="0.07" steps="479"/></proof>
@@ -78,7 +78,7 @@
   <proof prover="0"><result status="valid" time="0.34" steps="58545"/></proof>
   </goal>
   <goal name="add&#39;vc.19" expl="assertion" proved="true">
-  <proof prover="0"><result status="valid" time="0.36" steps="73038"/></proof>
+  <proof prover="0"><result status="valid" time="0.32" steps="73038"/></proof>
   </goal>
   <goal name="add&#39;vc.20" expl="unreachable point" proved="true">
   <proof prover="2"><result status="valid" time="0.05" steps="344"/></proof>
@@ -90,7 +90,7 @@
   <proof prover="2"><result status="valid" time="0.05" steps="211"/></proof>
   </goal>
   <goal name="add&#39;vc.23" expl="assertion" proved="true">
-  <proof prover="1"><result status="valid" time="0.28" steps="1004666"/></proof>
+  <proof prover="0"><result status="valid" time="0.36" steps="66084"/></proof>
   </goal>
   <goal name="add&#39;vc.24" expl="postcondition" proved="true">
   <transf name="split_vc" proved="true" >
@@ -108,7 +108,7 @@
    <proof prover="0"><result status="valid" time="0.40" steps="81342"/></proof>
    </goal>
    <goal name="add&#39;vc.25.1" expl="postcondition" proved="true">
-   <proof prover="2"><result status="valid" time="0.45" steps="13018"/></proof>
+   <proof prover="2"><result status="valid" time="0.45" steps="12886"/></proof>
    </goal>
   </transf>
   </goal>
@@ -156,16 +156,16 @@
   <proof prover="2"><result status="valid" time="0.02" steps="73"/></proof>
   </goal>
   <goal name="resize&#39;vc.2" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.05" steps="182"/></proof>
+  <proof prover="2"><result status="valid" time="0.08" steps="183"/></proof>
   </goal>
   <goal name="resize&#39;vc.3" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.04" steps="90"/></proof>
+  <proof prover="2"><result status="valid" time="0.05" steps="90"/></proof>
   </goal>
   <goal name="resize&#39;vc.4" expl="loop invariant init" proved="true">
   <proof prover="2"><result status="valid" time="0.03" steps="67"/></proof>
   </goal>
   <goal name="resize&#39;vc.5" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.03" steps="43"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="43"/></proof>
   </goal>
   <goal name="resize&#39;vc.6" expl="loop invariant init" proved="true">
   <proof prover="2"><result status="valid" time="0.03" steps="43"/></proof>
@@ -180,22 +180,22 @@
   <proof prover="2"><result status="valid" time="0.05" steps="131"/></proof>
   </goal>
   <goal name="resize&#39;vc.10" expl="postcondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.18" steps="1504"/></proof>
+  <proof prover="2"><result status="valid" time="0.18" steps="1489"/></proof>
   </goal>
   <goal name="resize&#39;vc.11" expl="precondition" proved="true">
   <proof prover="2"><result status="valid" time="0.03" steps="93"/></proof>
   </goal>
   <goal name="resize&#39;vc.12" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.04" steps="134"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="134"/></proof>
   </goal>
   <goal name="resize&#39;vc.13" expl="loop invariant init" proved="true">
   <proof prover="2"><result status="valid" time="0.05" steps="182"/></proof>
   </goal>
   <goal name="resize&#39;vc.14" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.05" steps="184"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="184"/></proof>
   </goal>
   <goal name="resize&#39;vc.15" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.08" steps="485"/></proof>
+  <proof prover="2"><result status="valid" time="0.05" steps="485"/></proof>
   </goal>
   <goal name="resize&#39;vc.16" expl="loop invariant init" proved="true">
   <proof prover="2"><result status="valid" time="0.06" steps="327"/></proof>
@@ -210,19 +210,19 @@
   <proof prover="2"><result status="valid" time="0.04" steps="170"/></proof>
   </goal>
   <goal name="resize&#39;vc.20" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.08" steps="1004"/></proof>
+  <proof prover="0"><result status="valid" time="0.29" steps="52767"/></proof>
   </goal>
   <goal name="resize&#39;vc.21" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.08" steps="1023"/></proof>
+  <proof prover="2"><result status="valid" time="0.06" steps="1021"/></proof>
   </goal>
   <goal name="resize&#39;vc.22" expl="loop invariant preservation" proved="true">
-  <proof prover="0"><result status="valid" time="0.29" steps="53807"/></proof>
+  <proof prover="0"><result status="valid" time="0.22" steps="53807"/></proof>
   </goal>
   <goal name="resize&#39;vc.23" expl="loop invariant preservation" proved="true">
   <proof prover="2"><result status="valid" time="0.05" steps="247"/></proof>
   </goal>
   <goal name="resize&#39;vc.24" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.09" steps="1767"/></proof>
+  <proof prover="2"><result status="valid" time="0.09" steps="1751"/></proof>
   </goal>
   <goal name="resize&#39;vc.25" expl="unreachable point" proved="true">
   <proof prover="2"><result status="valid" time="0.03" steps="208"/></proof>
@@ -237,7 +237,7 @@
   <proof prover="2"><result status="valid" time="0.05" steps="227"/></proof>
   </goal>
   <goal name="resize&#39;vc.29" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.06" steps="203"/></proof>
+  <proof prover="2"><result status="valid" time="0.08" steps="203"/></proof>
   </goal>
   <goal name="resize&#39;vc.30" expl="loop invariant preservation" proved="true">
   <proof prover="2"><result status="valid" time="0.07" steps="349"/></proof>

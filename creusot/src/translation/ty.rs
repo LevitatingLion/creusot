@@ -506,7 +506,7 @@ pub fn is_ghost_ty<'tcx>(tcx: TyCtxt<'tcx>, ty: Ty<'tcx>) -> bool {
     }
 }
 
-fn intty_to_ty(
+pub fn intty_to_ty(
     ctx: &TranslationCtx<'_, '_>,
     names: &mut CloneMap<'_>,
     ity: &creusot_rustc::middle::ty::IntTy,
@@ -549,7 +549,7 @@ fn intty_to_ty(
     }
 }
 
-fn uintty_to_ty(
+pub fn uintty_to_ty(
     ctx: &TranslationCtx<'_, '_>,
     names: &mut CloneMap<'_>,
     ity: &creusot_rustc::middle::ty::UintTy,

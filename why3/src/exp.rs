@@ -648,6 +648,13 @@ pub enum Constant {
     Other(String),
     Bool(bool),
 }
+
+impl Into<Exp> for Constant {
+    fn into(self) -> Exp {
+        Exp::Const(self)
+    }
+}
+
 impl Constant {
     pub fn const_true() -> Self {
         Constant::Bool(true)
